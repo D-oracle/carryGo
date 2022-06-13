@@ -1,0 +1,126 @@
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button> -->
+<mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+    <mat-step>
+        <ng-template matStepLabel>Select Role</ng-template>
+        <div class="d-grid gap-3">
+            <button class="btn btn-primary" (click)="users()" matStepperNext>Register as User</button>
+            <button class="btn btn-primary" (click)="company()" matStepperNext>Register as Company</button>
+        </div>
+    </mat-step>
+    <mat-step [stepControl]="userFormGroup" *ngIf="user">
+        <form [formGroup]="userFormGroup">
+            <ng-template matStepLabel>User Registration</ng-template>
+            <div>
+                <label for="">Full Name</label>
+                <input formControlName="fullname" type="text" class="form-control rounded-pill my-2" placeholder="Marc Stevens">
+            </div>
+            <div>
+                <label for="">Email Address</label>
+                <input formControlName="email" type="text" class="form-control rounded-pill my-2" placeholder="mail@website.com">
+            </div>
+            <div>
+                <label for="">Address</label>
+                <input formControlName="address" type="text" class="form-control rounded-pill my-2" placeholder="Umukoro 24">
+            </div>
+            <div>
+                <label for="">Phone</label>
+                <input formControlName="phone" type="text" class="form-control rounded-pill my-2" placeholder="(+234) xxxx xxxx">
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input formControlName="password" type="password" class="form-control rounded-pill my-2">
+            </div>
+            <div>
+                <label for="">Confirm Password</label>
+                <input type="password" class="form-control rounded-pill my-2">
+            </div>
+            <div>
+                <button class="btn btn-primary rounded-pill mx-2" matStepperPrevious>Back</button>
+                <button class="btn btn-success rounded-pill mx-2" matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="companyFormGroup" *ngIf="!user">
+        <form [formGroup]="companyFormGroup">
+            <ng-template matStepLabel>Company Registration</ng-template>
+            <div>
+                <label for="">Company Name</label>
+                <input formControlName="name" type="text" class="form-control rounded-pill my-2" placeholder="Amouralinks">
+            </div>
+            <div>
+                <label for="">Company Email</label>
+                <input formControlName="email" type="text" class="form-control rounded-pill my-2" placeholder="mail@website.com">
+            </div>
+            <div>
+                <label for="">Company Registration Number</label>
+                <input formControlName="registration" type="text" class="form-control rounded-pill my-2" placeholder="Ng736288">
+            </div>
+            <div>
+                <label for="">Tax ID</label>
+                <input formControlName="tax" type="text" class="form-control rounded-pill my-2" placeholder="NG736292">
+            </div>
+            <div>
+                <label for="">Company logo</label>
+                <input formControlName="logo" type="file" class="form-control rounded-pill my-2">
+            </div>
+            <div>
+                <label for="">Company Address</label>
+                <input formControlName="address" type="text" class="form-control rounded-pill my-2" placeholder="Umukoro 24">
+            </div>
+            <div>
+                <label for="">Company Phone</label>
+                <input  formControlName="phone" type="text" class="form-control rounded-pill my-2" placeholder="(+234) xxxx xxxx">
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input  formControlName="password" type="text" class="form-control rounded-pill my-2" placeholder="Amouralinks">
+            </div>
+            <div>
+                <label for="">Confirm Password</label>
+                <input formControlName="confirm password" type="password" class="form-control rounded-pill my-2" placeholder="Amouralinks">
+            </div>
+            <div>
+                <button class="btn btn-primary rounded-pill mx-2" matStepperPrevious>Back</button>
+                <button class="btn btn-success rounded-pill mx-2" matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="settingsFormGroup" *ngIf="!user">
+        <form [formGroup]="settingsFormGroup">
+            <ng-template matStepLabel>Default Settings</ng-template>
+            <div>
+                <input formControlName="checkbox" type="checkbox" class="my-3" placeholder="(+234) xxxx xxxx">&nbsp;
+                <label for="">Enable Pay on Delivery</label>
+            </div>
+            <div>
+                <input formControlName="checkbox" type="checkbox" class="my-3" placeholder="(+234) xxxx xxxx">&nbsp;
+                <label for="">Enable Rider's Wallet</label>
+            </div>
+            <div>
+                <button class="btn btn-primary rounded-pill mx-2" matStepperPrevious>Back</button>
+                <button class="btn btn-outline-success rounded-pill mx-2" matStepperNext>Skip</button>
+                <button class="btn btn-success rounded-pill mx-2" matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="riderFormGroup" *ngIf="!user">
+        <form [formGroup]="riderFormGroup">
+            <ng-template matStepLabel>Add Riders</ng-template>
+           
+            <div>
+                <button class="btn btn-primary rounded-pill mx-2" matStepperPrevious>Back</button>
+                <button class="btn btn-success rounded-pill mx-2" matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+            <button class="btn btn-primary rounded-pill mx-2" matStepperPrevious>Back</button>
+            <button type="submit" class="btn btn-success rounded-pill mx-2" (click)="submit()">Submit</button>
+        </div>
+    </mat-step>
+</mat-stepper>
