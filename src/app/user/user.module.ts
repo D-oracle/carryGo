@@ -12,6 +12,7 @@ import { MatListModule } from "@angular/material/list";
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatCardModule } from "@angular/material/card";
 import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 
 @NgModule({
@@ -27,6 +28,7 @@ import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
     CommonModule,
     MatSidenavModule,
     MatListModule,
+    MatCardModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
