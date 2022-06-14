@@ -5,9 +5,14 @@ import { WalletComponent } from './wallet/wallet.component';
 import { UserRoutingModule } from './user-routing.module';
 import { UserComponent } from './user.component';
 import { HomeComponent } from './home/home.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
+// import { SidenavComponent } from '../company/sidenav/sidenav.component';
 import { MatSidenavModule } from "@angular/material/sidenav";
-// import { MatSidenavModule } from "@angular/material/;
+import { OrdersComponent } from './orders/orders.component';
+import { MatListModule } from "@angular/material/list";
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +20,16 @@ import { MatSidenavModule } from "@angular/material/sidenav";
     ProfileComponent,
     WalletComponent,
     HomeComponent,
-    SidenavComponent
+    OrdersComponent,
+    BottomNavComponent
   ],
   imports: [
     CommonModule,
     MatSidenavModule,
+    MatListModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
     UserRoutingModule
   ]
 })

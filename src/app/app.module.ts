@@ -11,6 +11,7 @@ import { MatInputModule } from "@angular/material/input";
 import {MatIconModule} from '@angular/material/icon';
 import { MatStepperModule } from "@angular/material/stepper";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
+    MatButtonModule,
     ReactiveFormsModule,
     MatIconModule,
     MatStepperModule,

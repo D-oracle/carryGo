@@ -1,0 +1,18 @@
+.cg-btn {
+    /* color: rgba(238, 11, 230, 0.948); */
+    font-weight: 400;
+    /* background-color: rgb(87, 87, 236); */
+}
+.cg-btn-group {
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+.active {
+    color: blue;
+}
+.cg-btn-central{
+    height: 50px;
+    border-radius: 25px;
+}
