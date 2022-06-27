@@ -14,6 +14,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatCardModule } from "@angular/material/card";
 import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
+import { AddressComponent } from './address/address.component';
+import { FAQsComponent } from './faqs/faqs.component';
+import { EditComponent } from './edit/edit.component';
+import { ContactsComponent } from './contacts/contacts.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +27,11 @@ import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
     WalletComponent,
     HomeComponent,
     OrdersComponent,
-    BottomNavComponent
+    BottomNavComponent,
+    AddressComponent,
+    FAQsComponent,
+    EditComponent,
+    ContactsComponent
   ],
   imports: [
     CommonModule,
