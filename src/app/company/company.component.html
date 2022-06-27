@@ -1,1 +1,24 @@
-<p>company works!</p>
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar color="primary" class="example-toolbar">
+        <button class="btn" style="border: none; color: white;" (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <h1 class="example-app-name">Dashboard{{title}}</h1>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav style="width: 300px;" [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+            fixedTopGap="56">
+            <mat-nav-list>
+                <ng-container class="dropdown-menu" *ngFor="let menu of menuitem">
+                    <a mat-list-item class="my-2" [routerLink]="menu.path" ><mat-icon>{{menu.icon}}</mat-icon>&nbsp;&nbsp;{{menu.title}}</a>
+                </ng-container>
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+            <!-- <p *ngFor="let content of fillerContent">{{content}}</p> -->
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
