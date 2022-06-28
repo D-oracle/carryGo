@@ -132,18 +132,55 @@
                 </div>
 
                 <div>
-                    <h4 class="mt-3">
+                    <h3 class="mt-3">
                         <b>Pick a ride</b>
-                    </h4>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">Car</label>
+                    </h3>
+    
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
+                                    checked>
+                                <label class="btn btn-outline-primary mx-2 rounded" for="btnradio1" style="width: 100%;">
+                                    <div class="pr-3">
+                                        <mat-icon class="icon">motorcycle</mat-icon>Bike
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                <label class="btn btn-outline-primary mx-2 rounded" for="btnradio2" style="width: 100%;">
+                                    <div class="pr-3">
+                                        <mat-icon class="icon">local_shipping</mat-icon>Vehicle
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-check px-3 form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">Bike</label>
+                    <div class="d-grid my-3">
+                        <label for="" class="py-2">Select Delivery mode</label>
+                        <select name="" class="form-control py-2" id="">
+                            <option value="">Economy Delivery - <br> <small>Can take up to 6hrs</small></option>
+                            <!-- <option value=""> Delivery - <br> <small>Can take up to 6 hours</small></option> -->
+                            <option value="">Premium Delivery - <br> <small>Can take up to 1hr</small></option>
+                        </select>
+                        <!-- <button class="btn btn-primary py-2">Select Delivery Mode</button> -->
                     </div>
+                    <div class="card my-3">
+                        
+                        <div class="card-body text-center">
+                            Range <br> <b> 500 NGN - 1000 NGN </b>
+                        </div>
+                        <div class="card-footer text-center">
+                            629 KM - 700 KM
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="d-grid my-3">
+                        <button class="btn btn-primary py-2">Select Nearby Rider</button>
+                    </div>  
+                
 
                 </div>
             </div>
