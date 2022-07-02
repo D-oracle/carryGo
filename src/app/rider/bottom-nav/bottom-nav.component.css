@@ -11,7 +11,7 @@
     z-index: none;
     /* height: ; */
     display: flex;
-    position: fixed;
+    /* position: fixed; */
 }
 .active {
     color: blue;
